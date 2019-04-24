@@ -1,0 +1,22 @@
+.skip-links {
+  float: left;
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+.skip-links__link {
+  color: var(--bg);
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
+  z-index: 999;
+}
+.skip-links__link:focus {
+  background-color: var(--text);
+  font-size: 1.2em;
+  left: 0;
+  padding: 0.7em;
+  text-align: center;
+  text-decoration: underline;
+  top: 0;
+}
