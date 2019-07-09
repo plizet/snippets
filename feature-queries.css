@@ -1,0 +1,22 @@
+/** 
+ * Only apply styles if the browser supports a particular property 
+ * (https://www.youtube.com/watch?v=T8uxmUQZsck) 
+ * (https://www.youtube.com/watch?v=7y-xfxC2jGA) 
+ * */
+
+ @supports (property: value) {
+   /* Code */
+ }
+
+ @supports (property: value) or (other-property: value) {
+   /* Code */
+ }
+
+ @supports (property: value) and (other-property: value) {
+   /* Code */
+ }
+
+ /** Avoid using not because not all browsers support feature queries */
+ @supports not (property: value) {
+   /* Code */
+ }
