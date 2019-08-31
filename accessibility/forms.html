@@ -1,0 +1,85 @@
+<form>
+  <!-- Text fields -->
+  <label for="username">Username:</label>
+  <input id="username" name="username" type="text"><br>
+
+  <label for="extra">Tell me something about you:</label><br>
+  <textarea id="extra" name="extrainfo"></textarea> 
+
+  <br><br>
+
+  <!-- aria-describedby | can have multiple values (separated by spaces) | label and description are both read -->
+  <label for="password">Set password:</label>
+  <input aria-describedby="passwordrules" id="password" name="password" type="password"><br>
+  <span id=passwordrules>Password must be at least 8 characters long.</span>
+
+  <br><br>
+
+  <fieldset>
+    <legend>Select your favorite sport:</legend>
+    <!-- Checkboxes | in a fieldset to group them under the same legend -->
+    <input id="rugby" name="sport" type="checkbox" value="rugby">
+    <label for="rugby">Rugby</label><br>
+    <input id="basketball" name="sport" type="checkbox" value="basketball">
+    <label for="basketball">Basketball</label><br>
+    <input id="curling" name="sport" type="checkbox" value="curling">
+    <label for="curling">Curling</label>
+  </fieldset> 
+
+  <br><br>
+
+  <fieldset>
+    <!-- Radio buttons | in a fieldset to group them under the same legend  -->
+    <legend>Select your favorite day of the week:</legend>
+    <input id="monday" name="day" type="radio" value="monday">
+    <label for="monday">Monday</label><br>
+    <input id="tuesday" name="sport" type="radio" value="tuesday">
+    <label for="tuesday">Tuesday</label><br>
+    <input id="wednesday" name="sport" type="radio" value="wednesday">
+    <label for="wednesday">Wednesday</label>
+  </fieldset> 
+
+  <br><br>
+
+  <!-- Select -->
+  <label for="hour">Choose your favorite hour of the day:</label>
+  <select id="hour" name="select">
+    <optgroup label="Morning">
+      <option value="midnight">12am</option>
+      <option value="oneam">1am</option>
+      <option value="twoam">2am</option>
+    </optgroup>
+    <optgroup label="Afternoon">
+      <option value="midday">12pm</option>
+      <option value="onepm">1pm</option>
+      <option value="twopm">2pm</option>
+    </optgroup>
+  </select>
+
+  <br><br>
+
+  <!-- Buttons -->
+  <input type="reset" name="reset" value="Reset form">
+  <button type="submit" name="submit">Submit values</button> 
+
+
+  <!--
+    Additional info:
+
+    - aria-label overrides <label>
+    - aria-labelledby can contain multiple ids and be used by multiple inputs. Also overrides <label>
+    - for a hidden label, use either:
+      - title attribute on input
+      - <label> visually hidden in CSS
+      - aria-label
+  -->
+
+</form>
+
+<style>
+  /* Apply special style when either child input is in focus */
+  form:focus-within {
+    background-color: rgba(188, 244, 248, 0.253);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  }
+</style>
